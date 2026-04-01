@@ -8,7 +8,7 @@ function Home() {
     <>
       <header className="nav">
         <div className="nav-inner">
-          <Link to="/" className="nav-logo">tyler.ag</Link>
+          <Link to="/" className="nav-logo"><img src="/icon2.png" alt="Tyler.ag logo" /></Link>
           <nav>
             <a href="#about">About</a>
             <a href="#pepper">Pepper</a>
@@ -158,12 +158,12 @@ function Home() {
 
       <footer className="footer">
         <div className="footer-inner">
-          <span className="nav-logo">tyler.ag</span>
+          <Link to="/" className="nav-logo"><img src="/icon2.png" alt="Tyler.ag" /></Link>
           <div className="footer-links">
             <Link to="/terms">Terms</Link>
             <Link to="/privacy">Privacy</Link>
           </div>
-          <span className="footer-copy">© 2026 Tyler. All rights reserved.</span>
+          <span className="footer-copy">© 2026 Tyler's AI Company. All rights reserved.</span>
         </div>
       </footer>
     </>

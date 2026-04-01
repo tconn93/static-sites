@@ -5,7 +5,7 @@ export default function PrivacyPolicy() {
     <>
       <header className="nav">
         <div className="nav-inner">
-          <Link to="/" className="nav-logo">tyler.ag</Link>
+          <Link to="/" className="nav-logo"><img src="/icon2.png" alt="Tyler.ag logo" /></Link>
         </div>
       </header>
 
@@ -41,7 +41,7 @@ export default function PrivacyPolicy() {
 
           <section className="legal-section">
             <h2>6. Your Rights</h2>
-            <p>California residents: Access, delete, opt-out of sale/sharing (none occurs), limit sensitive data use (addressed via limited-purpose statement). Submit requests to <a href="mailto:privacy@tylersaicompany.com">privacy@tylersaicompany.com</a>.</p>
+            <p>California residents: Access, delete, opt-out of sale/sharing (none occurs), limit sensitive data use (addressed via limited-purpose statement). Submit requests to <a href="mailto:support@tyler.ag">support@tyler.ag</a>.</p>
           </section>
 
           <section className="legal-section">
@@ -58,7 +58,7 @@ export default function PrivacyPolicy() {
 
       <footer className="footer">
         <div className="footer-inner">
-          <span className="nav-logo">tyler.ag</span>
+          <Link to="/" className="nav-logo"><img src="/icon2.png" alt="Tyler.ag" /></Link>
           <div className="footer-links">
             <Link to="/terms">Terms</Link>
             <Link to="/privacy">Privacy</Link>
