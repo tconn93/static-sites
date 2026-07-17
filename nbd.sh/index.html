@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary SEO -->
+  <title>nbd.sh — Ship the impossible. Call it nothing.</title>
+  <meta name="description" content="nbd.sh is the ethos of engineers who ship the impossible and shrug. Zero drama. Zero downtime. No big deal.">
+  <meta name="keywords" content="nbd, shell, developer tools, shipping, deploy, terminal, engineering culture">
+  <meta name="author" content="nbd.sh">
+  <link rel="canonical" href="https://nbd.sh/">
+  <meta name="theme-color" content="#0a0f0d" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f4f7f5" media="(prefers-color-scheme: light)">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nbd.sh/">
+  <meta property="og:site_name" content="nbd.sh">
+  <meta property="og:title" content="nbd.sh — Ship the impossible. Call it nothing.">
+  <meta property="og:description" content="The ethos of engineers who ship the impossible and shrug. Zero drama. Zero downtime. No big deal.">
+  <meta property="og:image" content="https://nbd.sh/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="nbd.sh — Ship the impossible. Call it nothing.">
+  <meta name="twitter:description" content="Zero drama. Zero downtime. No big deal.">
+  <meta name="twitter:image" content="https://nbd.sh/assets/og.png">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+  <!-- Styles (single stylesheet, no external requests) -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "nbd.sh",
+    "url": "https://nbd.sh/",
+    "description": "The ethos of engineers who ship the impossible and shrug. Zero drama. Zero downtime. No big deal."
+  }
+  </script>
+
+  <!-- Set theme before first paint to avoid flash (reads saved choice, defaults dark) -->
+  <script>
+    (function () {
+      // mark JS as available so CSS can safely hide .reveal elements pre-animation
+      document.documentElement.classList.add('js');
+      var t = localStorage.getItem('nbd-theme');
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Skip link for keyboard users -->
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <nav class="nav__inner container" aria-label="Primary">
+      <a class="nav__brand" href="#top" aria-label="nbd.sh home">
+        <span class="nav__prompt" aria-hidden="true">$</span>&nbsp;nbd<span class="accent">.sh</span><span class="cursor" aria-hidden="true"></span>
+      </a>
+
+      <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#about" class="nav__link">about</a></li>
+        <li><a href="#features" class="nav__link">why</a></li>
+        <li><a href="#gallery" class="nav__link">receipts</a></li>
+        <li><a href="#testimonials" class="nav__link">chatter</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">join</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark / light mode">
+            <!-- moon (shown in dark mode) -->
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <!-- sun (shown in light mode) -->
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-label="Intro">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <p class="hero__kicker reveal">// engineers only. drama-free zone.</p>
+
+        <h1 class="hero__title">
+          <span class="reveal d1">Ship the <em class="glitch" data-text="impossible.">impossible.</em></span>
+          <span class="reveal d2">Call it <em class="accent">nothing.</em></span>
+        </h1>
+
+        <p class="hero__sub reveal d3">
+          <strong>nbd.sh</strong> is the home of the shrug-and-ship. Rewrite the core at 2am.
+          Migrate a billion rows over lunch. Deploy on Friday. Then say the three
+          sacred words: <em>no big deal.</em>
+        </p>
+
+        <div class="hero__actions reveal d4">
+          <a class="btn btn--primary" href="#contact">join the crew</a>
+          <a class="btn btn--ghost" href="#about">what is this?</a>
+        </div>
+
+        <!-- Live terminal demo (typed by js/main.js) -->
+        <div class="terminal reveal d5" role="img" aria-label="Terminal demo: a production deploy finishing in 1.2 seconds — no big deal">
+          <div class="terminal__bar">
+            <span class="dot dot--r" aria-hidden="true"></span>
+            <span class="dot dot--y" aria-hidden="true"></span>
+            <span class="dot dot--g" aria-hidden="true"></span>
+            <span class="terminal__title">~/prod — zsh</span>
+          </div>
+          <pre class="terminal__body" id="heroTerm" aria-hidden="true"></pre>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#about" aria-label="Scroll to about section">
+        <span class="hero__scroll-chevron" aria-hidden="true">▾</span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section__title reveal"><span class="section__hash" aria-hidden="true">#</span> about the brand</h2>
+        <div class="about">
+          <div class="about__text reveal">
+            <p class="about__lede">
+              <strong>nbd.sh</strong> stands for <em class="accent">no big deal</em> — the two-letter
+              extension is the shell you live in, and the attitude is the whole brand.
+            </p>
+            <p>
+              It's the quiet flex of the senior engineer who unbreaks prod before the incident
+              channel finishes typing. The one-line fix for the bug that ate a week. The
+              migration nobody noticed because nothing went down.
+            </p>
+            <p>
+              We don't do hero culture, war rooms, or 40-slide postmortems for a config typo.
+              We do calm, competent, terrifyingly effective work — and then we understate it.
+              That's the craft. That's the flex. <em>That's nbd.</em>
+            </p>
+          </div>
+          <div class="about__stats reveal" aria-label="Statistics">
+            <div class="stat">
+              <span class="stat__num" data-count="1200000">0</span>
+              <span class="stat__label">shrugs shipped</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="99.999" data-decimals="3">0</span>
+              <span class="stat__label">% uptime, obviously</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="0">0</span>
+              <span class="stat__label">panics per incident</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="42" data-suffix="s">0</span>
+              <span class="stat__label">avg. time-to-fix</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="section section--alt" id="features">
+      <div class="container">
+        <h2 class="section__title reveal"><span class="section__hash" aria-hidden="true">#</span> why it's badass</h2>
+        <p class="section__sub reveal">Six rules of the shrug-and-ship. Memorize them. Live them.</p>
+
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3 class="card__title">Speed is silence</h3>
+            <p>The fastest fix is the one nobody had time to worry about. If they saw the outage, you were slow.</p>
+            <code class="card__code">fix &amp;&amp; deploy # 41s</code>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.93 6l14.14 12M19.07 6 4.93 18M2 12h20"/></svg>
+            </div>
+            <h3 class="card__title">Ice in the veins</h3>
+            <p>Prod is down, execs are pinging, dashboards are red. Your heart rate: resting. Your reply: "on it."</p>
+            <code class="card__code">panic=false; proceed</code>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+            </div>
+            <h3 class="card__title">One-liners or nothing</h3>
+            <p>Why write a service when a pipe will do? Elegance is deleting 4,000 lines and replacing them with 12.</p>
+            <code class="card__code">-4,000 / +12 LOC</code>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="15" r="4"/><circle cx="18" cy="15" r="4"/><path d="M10 15h4M2 15V8a2 2 0 0 1 2-2M22 15V8a2 2 0 0 0-2-2"/></svg>
+            </div>
+            <h3 class="card__title">Understatement as art</h3>
+            <p>"Minor cleanup" — the commit message on a full rewrite of the billing engine. Merged. No comments.</p>
+            <code class="card__code">git commit -m "minor cleanup"</code>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg>
+            </div>
+            <h3 class="card__title">Friday deploys</h3>
+            <p>Scared of Fridays? That's a testing problem, not a calendar problem. We ship when it's ready. It's ready.</p>
+            <code class="card__code">cron: 0 17 * * FRI</code>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+            </div>
+            <h3 class="card__title">Receipts, not war stories</h3>
+            <p>No embellishment needed. The graphs speak. The uptime speaks. You? You just shrug.</p>
+            <code class="card__code">uptime --brag=off</code>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY / RECEIPTS ============ -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <h2 class="section__title reveal"><span class="section__hash" aria-hidden="true">#</span> the receipts</h2>
+        <p class="section__sub reveal">Real feats. Fake names. Zero drama. Hover for the aftermath.</p>
+
+        <div class="gallery">
+          <figure class="shot reveal">
+            <div class="shot__term">
+              <div class="terminal__bar terminal__bar--mini">
+                <span class="dot dot--r" aria-hidden="true"></span><span class="dot dot--y" aria-hidden="true"></span><span class="dot dot--g" aria-hidden="true"></span>
+                <span class="terminal__title">migration.log</span>
+              </div>
+              <pre class="shot__code"><span class="t-dim">$</span> pg_migrate --rows 2.1B --downtime 0
+<span class="t-ok">✓</span> 2,147,483,647 rows migrated
+<span class="t-ok">✓</span> downtime: 0ms
+<span class="t-dim">elapsed: lunch break</span></pre>
+            </div>
+            <figcaption class="shot__caption">Migrated 2.1 billion rows during a burrito. <span class="accent">nbd.</span></figcaption>
+          </figure>
+
+          <figure class="shot reveal">
+            <div class="shot__term">
+              <div class="terminal__bar terminal__bar--mini">
+                <span class="dot dot--r" aria-hidden="true"></span><span class="dot dot--y" aria-hidden="true"></span><span class="dot dot--g" aria-hidden="true"></span>
+                <span class="terminal__title">incident-742.txt</span>
+              </div>
+              <pre class="shot__code"><span class="t-dim">02:13</span> alert: core service down
+<span class="t-dim">02:14</span> k: "on it"
+<span class="t-dim">02:19</span> k: "fixed. root cause in thread."
+<span class="t-ok">✓</span> incident closed. 6 minutes.</pre>
+            </div>
+            <figcaption class="shot__caption">Six-minute incident. The postmortem was one sentence. <span class="accent">nbd.</span></figcaption>
+          </figure>
+
+          <figure class="shot reveal">
+            <div class="shot__term">
+              <div class="terminal__bar terminal__bar--mini">
+                <span class="dot dot--r" aria-hidden="true"></span><span class="dot dot--y" aria-hidden="true"></span><span class="dot dot--g" aria-hidden="true"></span>
+                <span class="terminal__title">git log --oneline</span>
+              </div>
+              <pre class="shot__code"><span class="t-hash">a1f9c2e</span> minor cleanup
+<span class="t-hash">b7d3e01</span> tweak
+<span class="t-hash">c4a8f56</span> small thing
+<span class="t-dim">(diff: -18,204 / +311 lines)</span></pre>
+            </div>
+            <figcaption class="shot__caption">Deleted 18k lines across three "tweaks". <span class="accent">nbd.</span></figcaption>
+          </figure>
+
+          <figure class="shot reveal">
+            <div class="shot__term">
+              <div class="terminal__bar terminal__bar--mini">
+                <span class="dot dot--r" aria-hidden="true"></span><span class="dot dot--y" aria-hidden="true"></span><span class="dot dot--g" aria-hidden="true"></span>
+                <span class="terminal__title">deploy.log — friday 17:02</span>
+              </div>
+              <pre class="shot__code"><span class="t-dim">$</span> ship --prod --region all
+<span class="t-ok">✓</span> 14 services, 9 regions
+<span class="t-ok">✓</span> zero rollbacks
+<span class="t-dim">have a good weekend.</span></pre>
+            </div>
+            <figcaption class="shot__caption">Global deploy at 5pm Friday. Weekend: uninterrupted. <span class="accent">nbd.</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section section--alt" id="testimonials">
+      <div class="container">
+        <h2 class="section__title reveal"><span class="section__hash" aria-hidden="true">#</span> the chatter</h2>
+        <p class="section__sub reveal">What people say when the dust settles and nothing broke.</p>
+
+        <div class="quotes">
+          <blockquote class="quote reveal">
+            <p>"I watched her hot-patch the scheduler during the all-hands demo. Nobody noticed. She typed 'nbd' in Slack and muted the channel."</p>
+            <footer class="quote__who"><span class="t-dim">—</span> mara k. <span class="quote__role">// staff engineer, fintech</span></footer>
+          </blockquote>
+
+          <blockquote class="quote reveal">
+            <p>"Our AWS bill dropped 60% overnight. The PR description was literally the shrug emoji. That's it. That's the whole description."</p>
+            <footer class="quote__who"><span class="t-dim">—</span> deshawn r. <span class="quote__role">// platform lead</span></footer>
+          </blockquote>
+
+          <blockquote class="quote reveal">
+            <p>"They rewrote our auth layer in a weekend because it 'was bugging them'. Zero regressions. I have never felt so seen and so useless."</p>
+            <footer class="quote__who"><span class="t-dim">—</span> priya s. <span class="quote__role">// engineering manager</span></footer>
+          </blockquote>
+
+          <blockquote class="quote reveal">
+            <p>"Asked how the launch went. Got one message back: a green checkmark. 4 million users onboarded. This is the culture I want to die in."</p>
+            <footer class="quote__who"><span class="t-dim">—</span> tomás v. <span class="quote__role">// cto, seed-stage</span></footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT / CTA ============ -->
+    <section class="section section--cta" id="contact">
+      <div class="container">
+        <h2 class="section__title reveal"><span class="section__hash" aria-hidden="true">#</span> join the crew</h2>
+        <p class="section__sub reveal">
+          One command. That's the whole onboarding. You knew it would be.
+        </p>
+
+        <div class="install reveal">
+          <code class="install__cmd" id="installCmd">curl -fsSL https://nbd.sh | sh</code>
+          <button class="install__copy" id="copyBtn" aria-label="Copy install command">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span id="copyLabel">copy</span>
+          </button>
+        </div>
+
+        <p class="install__note reveal">
+          (It prints the manifesto and tells you to get back to work. What did you expect?)
+        </p>
+
+        <div class="hero__actions reveal">
+          <a class="btn btn--primary" href="mailto:crew@nbd.sh">crew@nbd.sh</a>
+          <a class="btn btn--ghost" href="https://github.com" rel="noopener" target="_blank">github ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__brand"><span class="t-dim">$</span> nbd<span class="accent">.sh</span> <span class="t-dim">— ship the impossible. call it nothing.</span></p>
+      <p class="footer__legal t-dim">© 2026 nbd.sh · exit code 0</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

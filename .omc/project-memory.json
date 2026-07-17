@@ -1,0 +1,240 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1784270111003,
+  "projectRoot": "/mnt/c/Users/tyler/projects/static-sites",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "deepnano.dev": {
+      "path": "deepnano.dev",
+      "purpose": null,
+      "fileCount": 16,
+      "lastAccessed": 1784270110949,
+      "keyFiles": [
+        "PrivacyPolicy.md",
+        "README.md",
+        "TermsOfServices.md",
+        "idea.md",
+        "index.html"
+      ]
+    },
+    "grok.hot": {
+      "path": "grok.hot",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1784270110954,
+      "keyFiles": []
+    },
+    "grokbuild.cloud": {
+      "path": "grokbuild.cloud",
+      "purpose": null,
+      "fileCount": 11,
+      "lastAccessed": 1784270110957,
+      "keyFiles": [
+        "AGENTS.md",
+        "CLAUDE.md",
+        "README.md",
+        "eslint.config.mjs",
+        "next-env.d.ts"
+      ]
+    },
+    "grokbuild.tech": {
+      "path": "grokbuild.tech",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1784270110961,
+      "keyFiles": []
+    },
+    "grokswarm.dev": {
+      "path": "grokswarm.dev",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1784270110964,
+      "keyFiles": []
+    },
+    "nbd.sh": {
+      "path": "nbd.sh",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1784270110967,
+      "keyFiles": []
+    },
+    "tyler.ag": {
+      "path": "tyler.ag",
+      "purpose": null,
+      "fileCount": 10,
+      "lastAccessed": 1784270110970,
+      "keyFiles": [
+        "README.md",
+        "eslint.config.js",
+        "index.html",
+        "package-lock.json",
+        "package.json"
+      ]
+    },
+    "yeet.pw": {
+      "path": "yeet.pw",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1784270110972,
+      "keyFiles": []
+    },
+    "deepnano.dev/dist": {
+      "path": "deepnano.dev/dist",
+      "purpose": "Distribution/build output",
+      "fileCount": 11,
+      "lastAccessed": 1784270110978,
+      "keyFiles": [
+        "apple-touch-icon.png",
+        "deepnano-logo.jpg",
+        "favicon-96x96.png"
+      ]
+    },
+    "grokbuild.cloud/app": {
+      "path": "grokbuild.cloud/app",
+      "purpose": "Application code",
+      "fileCount": 3,
+      "lastAccessed": 1784270110984,
+      "keyFiles": [
+        "globals.css",
+        "layout.tsx",
+        "page.tsx"
+      ]
+    },
+    "grokbuild.cloud/data": {
+      "path": "grokbuild.cloud/data",
+      "purpose": "Data files",
+      "fileCount": 1,
+      "lastAccessed": 1784270110988,
+      "keyFiles": [
+        "waitlist.json"
+      ]
+    },
+    "tyler.ag/dist": {
+      "path": "tyler.ag/dist",
+      "purpose": "Distribution/build output",
+      "fileCount": 11,
+      "lastAccessed": 1784270110998,
+      "keyFiles": [
+        "_redirects",
+        "apple-touch-icon.png",
+        "favicon-96x96.png"
+      ]
+    },
+    "tyler.ag/node_modules": {
+      "path": "tyler.ag/node_modules",
+      "purpose": "Dependencies",
+      "fileCount": 1,
+      "lastAccessed": 1784270111002,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "nbd.sh/index.html",
+      "accessCount": 9,
+      "lastAccessed": 1784271314014,
+      "type": "file"
+    },
+    {
+      "path": "nbd.sh/css/style.css",
+      "accessCount": 7,
+      "lastAccessed": 1784271329194,
+      "type": "file"
+    },
+    {
+      "path": "yeet.pw/css/style.css",
+      "accessCount": 5,
+      "lastAccessed": 1784271104924,
+      "type": "file"
+    },
+    {
+      "path": "yeet.pw/assets/favicon.svg",
+      "accessCount": 4,
+      "lastAccessed": 1784271067448,
+      "type": "file"
+    },
+    {
+      "path": "nbd.sh/js/main.js",
+      "accessCount": 2,
+      "lastAccessed": 1784271315068,
+      "type": "file"
+    },
+    {
+      "path": "yeet.pw/index.html",
+      "accessCount": 1,
+      "lastAccessed": 1784270861319,
+      "type": "file"
+    },
+    {
+      "path": "yeet.pw/vercel.json",
+      "accessCount": 1,
+      "lastAccessed": 1784270869621,
+      "type": "file"
+    },
+    {
+      "path": "yeet.pw/js/main.js",
+      "accessCount": 1,
+      "lastAccessed": 1784271014781,
+      "type": "file"
+    },
+    {
+      "path": "yeet.pw/README.md",
+      "accessCount": 1,
+      "lastAccessed": 1784271034563,
+      "type": "file"
+    },
+    {
+      "path": "nbd.sh/assets/favicon.svg",
+      "accessCount": 1,
+      "lastAccessed": 1784271090282,
+      "type": "file"
+    },
+    {
+      "path": "nbd.sh/assets/og.png",
+      "accessCount": 1,
+      "lastAccessed": 1784271115146,
+      "type": "file"
+    },
+    {
+      "path": "nbd.sh/vercel.json",
+      "accessCount": 1,
+      "lastAccessed": 1784271124085,
+      "type": "file"
+    },
+    {
+      "path": "nbd.sh/README.md",
+      "accessCount": 1,
+      "lastAccessed": 1784271136855,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

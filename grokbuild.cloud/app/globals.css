@@ -1,0 +1,358 @@
+@import "tailwindcss";
+
+/* =====================================================================
+   Exact fonts, color tokens, and base from https://x.ai/cli
+   (extracted from inspected stylesheet)
+   ===================================================================== */
+
+/* Font stacks (we use the fallback stacks since exact woff2 are hashed) */
+:root {
+  --font-universal-sans: "universalSans", "universalSans Fallback", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-universal-sans-display: "universalSansDisplay", "universalSansDisplay Fallback", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-geist-mono: "GeistMono", ui-monospace, SFMono-Regular, "Roboto Mono", Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace;
+
+  /* Full color tokens from x.ai/cli */
+  --color-jet: 0 0% 4%;
+  --color-charcoal: 0 0% 10%;
+  --color-umbra: 221 12% 14%;
+  --color-ink: 213 11% 16%;
+  --color-ash: 216 5% 19;
+  --color-steel: 216 4% 22%;
+  --color-fog: 216 4% 51%;
+  --color-pewter: 213 12% 70%;
+  --color-dove: 222 19% 86%;
+  --color-nimbus: 228 21.74% 95.49%;
+  --color-ivory: 40 18% 97%;
+  --color-white: 0 0% 100%;
+  --color-midnight: 214 58.3% 9.4%;
+  --color-evenfall: 214 16.1% 28%;
+  --color-breeze: 214 48.9% 73.9%;
+  --color-dawn: 37 100% 76%;
+  --color-sunset: 22 100% 51.6%;
+  --color-dusk: 263 70% 50.4%;
+  --color-twilight: 255 92% 76%;
+  --color-codeblock: 0 0% 7%;
+
+  /* Terminal traffic lights (exact) */
+  --terminal-traffic-red: #ff5f57;
+  --terminal-traffic-red-glow: #ff5f572e;
+  --terminal-traffic-yellow: #ffbd2e;
+  --terminal-traffic-yellow-glow: #ffbd2e1f;
+  --terminal-traffic-green: #28c840;
+  --terminal-traffic-green-glow: #28c8401f;
+
+  /* Dark theme mapping (our site is always dark like x.ai/cli) */
+  --primary: var(--color-white);
+  --primary-hover: var(--color-ivory);
+  --secondary: var(--color-fog);
+  --secondary-hover: var(--color-pewter);
+  --accent: var(--color-sunset);
+  --accent-hover: var(--color-dawn);
+  --background: var(--color-jet);
+  --background-hover: var(--color-umbra);
+  --foreground: var(--color-dove);
+  --foreground-hover: var(--color-white);
+  --card: var(--color-charcoal);
+  --border: var(--color-umbra);
+  --input: var(--color-fog);
+  --success: 142 69% 58%;
+  --warning: 45 93% 58%;
+  --error: 0 72% 65%;
+  --info: var(--color-breeze);
+
+  --scroll-size: 6px;
+  --scroll-track-color: var(--color-charcoal);
+  --scroll-thumb-color: var(--color-jet);
+  --radius: .5rem;
+
+  /* Header from x.ai */
+  --site-header-h: 4rem;
+  --site-header-bg: hsl(var(--background) / .85);
+  --site-header-blur: 12px;
+  --home-hero-pt-gap: 2.25rem;
+}
+
+/* Base from x.ai/cli */
+html {
+  overflow-x: hidden;
+  font-family: var(--font-universal-sans);
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+  line-height: 1.5;
+}
+
+body {
+  background-color: hsl(var(--background) / 1);
+  color: hsl(var(--foreground) / 1);
+  line-height: inherit;
+  margin: 0;
+}
+
+/* Selection like x.ai */
+::selection {
+  background: hsl(var(--foreground));
+  color: hsl(var(--background));
+}
+
+/* Code / mono */
+code, kbd, samp, pre {
+  font-family: var(--font-geist-mono);
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  font-size: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-universal-sans-display);
+  font-weight: 550;
+}
+
+/* Code window / shiki line rules (from x.ai) */
+.code-window-chrome .shiki,
+.code-window-chrome .shiki pre {
+  background-color: transparent !important;
+}
+
+.shiki {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 13px;
+}
+
+.code-window-chrome .shiki {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.code-window-chrome .shiki pre {
+  margin: 0;
+  display: block;
+  overflow: hidden;
+}
+
+.code-window-chrome .shiki code {
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  min-width: 0;
+  display: flex;
+}
+
+.code-window-chrome .shiki .line,
+.shiki .line {
+  padding-left: .75rem;
+  padding-right: .75rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  min-height: 0;
+  margin: 0;
+  padding-block: 0;
+  line-height: 24px;
+  height: auto !important;
+}
+
+.shiki pre {
+  display: flex;
+}
+
+.shiki code {
+  flex-direction: column;
+  width: 100%;
+  min-width: max-content;
+  display: flex;
+}
+
+.shiki .line {
+  height: 20px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  position: relative;
+}
+
+.shiki .line:last-child {
+  height: auto;
+}
+
+/* =====================================================================
+   Component styles tuned to x.ai/cli aesthetic + our custom elements
+   ===================================================================== */
+
+/* Navbar — exactly matches --site-header-h and bg from x.ai */
+.navbar {
+  height: var(--site-header-h);
+  background: var(--site-header-bg);
+  backdrop-filter: blur(var(--site-header-blur));
+  border-bottom: 1px solid hsl(var(--border) / 1);
+}
+
+/* Terminal / Code window — heavily based on .code-window-chrome + shiki */
+.code-window,
+.terminal {
+  border: 1px solid hsl(var(--border) / 1);
+  background: hsl(var(--color-charcoal) / 1);
+  font-size: 13px;
+  overflow: hidden;
+}
+
+.terminal-header {
+  background: transparent;
+  border-bottom: 1px solid hsl(var(--border) / 1);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 11px;
+}
+
+/* Exact traffic light colors from x.ai */
+.traffic-light {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  display: inline-block;
+}
+.traffic-light.red    { background: var(--terminal-traffic-red); }
+.traffic-light.yellow { background: var(--terminal-traffic-yellow); }
+.traffic-light.green  { background: var(--terminal-traffic-green); }
+
+/* Line styling lifted from their .shiki .line rules */
+.terminal-body,
+.shiki {
+  font-size: 13px;
+}
+
+.terminal-body .line {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  line-height: 20px;
+  min-height: 0;
+  margin: 0;
+  padding-block: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  height: auto;
+}
+
+/* Terminal syntax colors (kept simple and readable) */
+.terminal .prompt { color: #28c840; }   /* green */
+.terminal .success { color: #28c840; }
+.terminal .agent { color: #a1a1aa; }
+.terminal .text { color: #ededed; }
+
+.terminal .cursor {
+  display: inline-block;
+  width: 7px;
+  height: 1em;
+  background: currentColor;
+  vertical-align: middle;
+  margin-left: 1px;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Feature + step cards using their card + border tokens */
+.feature-card,
+.step-card {
+  background: hsl(var(--card) / 1);
+  border: 1px solid hsl(var(--border) / 1);
+  transition: border-color .15s ease;
+}
+.feature-card:hover {
+  border-color: hsl(var(--border) / .6);
+}
+
+/* Status badge using accent */
+.status-badge {
+  background: hsl(var(--accent) / .1);
+  color: hsl(var(--accent));
+  border: 1px solid hsl(var(--accent) / .3);
+}
+
+/* Buttons — clean, following their button base + common x.ai CTAs */
+.btn-primary {
+  background-color: hsl(var(--foreground) / 1);
+  color: hsl(var(--background) / 1);
+  font-weight: 500;
+  border-radius: 9999px;
+  padding: 0.5rem 1.25rem;
+  transition: background-color .15s ease;
+}
+.btn-primary:hover {
+  background-color: hsl(var(--foreground) / .9);
+}
+
+.btn-secondary {
+  border: 1px solid hsl(var(--border) / 1);
+  color: hsl(var(--foreground) / 1);
+  font-weight: 400;
+  border-radius: 9999px;
+  transition: all .15s ease;
+}
+.btn-secondary:hover {
+  background: hsl(var(--card) / 1);
+  border-color: hsl(var(--border) / .6);
+}
+
+.btn-waitlist {
+  background-color: hsl(var(--foreground) / 1);
+  color: hsl(var(--background) / 1);
+  font-weight: 500;
+  border-radius: 0.375rem;
+  transition: background-color .15s ease;
+}
+.btn-waitlist:hover {
+  background-color: hsl(var(--foreground) / .9);
+}
+
+/* 80% transparent centered mask (custom for pre-launch) */
+.access-mask {
+  background: transparent;
+}
+
+.mask-card {
+  background: hsl(var(--card) / .92);
+  border: 1px solid hsl(var(--border) / 1);
+  color: hsl(var(--foreground) / 1);
+  border-radius: 0.75rem;
+}
+
+/* Waitlist form input */
+.waitlist-input {
+  background: hsl(var(--background) / .6);
+  border: 1px solid hsl(var(--border) / 1);
+  color: hsl(var(--foreground) / 1);
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+}
+.waitlist-input:focus {
+  border-color: hsl(var(--foreground) / .5);
+  outline: none;
+}
+.waitlist-input::placeholder {
+  color: hsl(var(--secondary) / 1);
+}
+
+/* Eyebrow labels */
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: hsl(var(--secondary) / 1);
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid hsl(var(--border) / 1);
+  color: hsl(var(--secondary) / 1);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}

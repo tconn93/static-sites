@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="YEET — Launch your digital presence into orbit. Bold, high-energy creative platform for those who throw it all in.">
+  <meta name="keywords" content="yeet, creative, digital, launch, brand, design">
+  <meta name="author" content="YEET">
+  <meta name="theme-color" content="#050505">
+  <meta name="color-scheme" content="dark light">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="YEET — Throw It Into Orbit">
+  <meta property="og:description" content="Bold, high-energy creative platform. Launch your digital presence with force.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yeet.pw">
+  <meta property="og:image" content="https://yeet.pw/assets/og-image.png">
+  <meta property="og:site_name" content="YEET">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="YEET — Throw It Into Orbit">
+  <meta name="twitter:description" content="Bold, high-energy creative platform. Launch your digital presence with force.">
+  <meta name="twitter:image" content="https://yeet.pw/assets/og-image.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://yeet.pw">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="preload" href="js/main.js" as="script">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>YEET — Throw It Into Orbit</title>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <header class="nav-header" id="header">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#hero" class="nav__logo" aria-label="YEET home">
+        <span class="nav__logo-text">YEET</span>
+        <span class="nav__logo-dot"></span>
+      </a>
+
+      <!-- Desktop nav links -->
+      <ul class="nav__links" id="navLinks" role="list">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#features" class="nav__link">Features</a></li>
+        <li><a href="#showcase" class="nav__link">Showcase</a></li>
+        <li><a href="#testimonials" class="nav__link">Praise</a></li>
+        <li><a href="#cta" class="nav__link nav__link--cta">Join</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <!-- Theme toggle -->
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          aria-label="Toggle light/dark mode"
+          title="Toggle theme"
+          type="button"
+        >
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <!-- Mobile hamburger -->
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          type="button"
+        >
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <ul class="mobile-menu__links" role="list">
+        <li><a href="#about" class="mobile-menu__link">About</a></li>
+        <li><a href="#features" class="mobile-menu__link">Features</a></li>
+        <li><a href="#showcase" class="mobile-menu__link">Showcase</a></li>
+        <li><a href="#testimonials" class="mobile-menu__link">Praise</a></li>
+        <li><a href="#cta" class="mobile-menu__link mobile-menu__link--cta">Join the Movement</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         HERO SECTION
+         ============================================================ -->
+    <section class="hero" id="hero" aria-labelledby="heroHeading">
+      <!-- Animated background particles (populated by JS) -->
+      <canvas class="hero__particles" id="particleCanvas" aria-hidden="true"></canvas>
+
+      <div class="hero__content">
+        <div class="hero__badge reveal-up">
+          <span class="hero__badge-pulse"></span>
+          Limited access • Launching soon
+        </div>
+
+        <h1 class="hero__title reveal-up" id="heroHeading">
+          <span class="hero__title-line hero__title-line--main">
+            <span class="hero__char" style="--i:0">Y</span>
+            <span class="hero__char" style="--i:1">E</span>
+            <span class="hero__char" style="--i:2">E</span>
+            <span class="hero__char" style="--i:3">T</span>
+          </span>
+          <span class="hero__title-line hero__title-line--sub reveal-up-delay">
+            Throw it into orbit.
+          </span>
+        </h1>
+
+        <p class="hero__desc reveal-up-delay-2">
+          The boldest creative platform on the internet. No half-measures.
+          No playing it safe. You're here to <em>launch</em> — we provide the thrust.
+        </p>
+
+        <div class="hero__actions reveal-up-delay-3">
+          <a href="#cta" class="btn btn--primary">
+            Get Early Access
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+          <a href="#showcase" class="btn btn--ghost">
+            See It In Action
+          </a>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator reveal-up-delay-4" aria-hidden="true">
+          <span class="scroll-indicator__text">Scroll</span>
+          <span class="scroll-indicator__line"></span>
+        </div>
+      </div>
+
+      <!-- Gradient overlays -->
+      <div class="hero__gradient hero__gradient--top" aria-hidden="true"></div>
+      <div class="hero__gradient hero__gradient--bottom" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT SECTION
+         ============================================================ -->
+    <section class="about section" id="about" aria-labelledby="aboutHeading">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__tag reveal-up">The Brand</span>
+          <h2 class="section__title reveal-up" id="aboutHeading">
+            What the <span class="text-gradient">yeet</span>?
+          </h2>
+          <p class="section__subtitle reveal-up">
+            We're not another bland platform. YEET is a mindset — a declaration
+            that you're done overthinking and ready to <strong>throw down</strong>.
+          </p>
+        </div>
+
+        <div class="about__grid">
+          <!-- Stat cards -->
+          <div class="stat-card reveal-up">
+            <span class="stat-card__number" data-count="247">0</span>
+            <span class="stat-card__suffix">K+</span>
+            <span class="stat-card__label">Launches and counting</span>
+          </div>
+          <div class="stat-card reveal-up">
+            <span class="stat-card__number" data-count="99.9">0</span>
+            <span class="stat-card__suffix">%</span>
+            <span class="stat-card__label">Uptime. We don't sleep.</span>
+          </div>
+          <div class="stat-card reveal-up">
+            <span class="stat-card__number" data-count="12">0</span>
+            <span class="stat-card__suffix">ms</span>
+            <span class="stat-card__label">Average response time</span>
+          </div>
+
+          <!-- Brand story card -->
+          <div class="about__story reveal-up">
+            <div class="about__story-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <h3 class="about__story-title">Born from velocity</h3>
+            <p class="about__story-text">
+              YEET started with a simple truth: the internet rewards those who
+              <em>move</em>. While others iterate in circles, we ship at escape
+              velocity. Every pixel, every line of code, every launch — full
+              send, every time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FEATURES SECTION
+         ============================================================ -->
+    <section class="features section" id="features" aria-labelledby="featuresHeading">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__tag reveal-up">Why Badass</span>
+          <h2 class="section__title reveal-up" id="featuresHeading">
+            Built different. <span class="text-gradient">Literally.</span>
+          </h2>
+          <p class="section__subtitle reveal-up">
+            Every feature engineered for those who refuse to blend in.
+          </p>
+        </div>
+
+        <div class="features__grid">
+          <!-- Feature 1 -->
+          <article class="feature-card reveal-up" tabindex="0">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Lightning Performance</h3>
+            <p class="feature-card__text">
+              Sub-100ms loads. Lighthouse scores that make competitors weep.
+              We optimize like our lives depend on it — because your users' attention does.
+            </p>
+            <span class="feature-card__metric">100ms avg</span>
+          </article>
+
+          <!-- Feature 2 -->
+          <article class="feature-card reveal-up" tabindex="0">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Bulletproof Security</h3>
+            <p class="feature-card__text">
+              Zero-trust architecture. End-to-end encryption by default.
+              Your data is yours — we just yeet it through the most secure pipes on earth.
+            </p>
+            <span class="feature-card__metric">SOC 2 Type II</span>
+          </article>
+
+          <!-- Feature 3 -->
+          <article class="feature-card reveal-up" tabindex="0">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">API-First Everything</h3>
+            <p class="feature-card__text">
+              REST, GraphQL, WebSocket, gRPC — we speak every protocol fluently.
+              SDKs in 8 languages. Docs that don't suck. Integrate in minutes, not days.
+            </p>
+            <span class="feature-card__metric">8 SDKs</span>
+          </article>
+
+          <!-- Feature 4 -->
+          <article class="feature-card reveal-up" tabindex="0">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Global Edge Network</h3>
+            <p class="feature-card__text">
+              300+ points of presence. Your content lands before they even
+              finish typing the URL. Edge compute, edge caching, edge everything.
+            </p>
+            <span class="feature-card__metric">300+ PoPs</span>
+          </article>
+
+          <!-- Feature 5 -->
+          <article class="feature-card reveal-up" tabindex="0">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Real-Time Analytics</h3>
+            <p class="feature-card__text">
+              See every click, every conversion, every eyeball — as it happens.
+              No sampling, no delays, no "check back tomorrow" nonsense.
+            </p>
+            <span class="feature-card__metric">&lt;50ms latency</span>
+          </article>
+
+          <!-- Feature 6 -->
+          <article class="feature-card reveal-up" tabindex="0">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Community First</h3>
+            <p class="feature-card__text">
+              24/7 Discord with real humans. Weekly office hours with the builders.
+              Your feedback ships to production. We're not a black box — we're your crew.
+            </p>
+            <span class="feature-card__metric">50K+ members</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SHOWCASE / GALLERY SECTION
+         ============================================================ -->
+    <section class="showcase section" id="showcase" aria-labelledby="showcaseHeading">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__tag reveal-up">Showcase</span>
+          <h2 class="section__title reveal-up" id="showcaseHeading">
+            See what a <span class="text-gradient">yeet</span> looks like.
+          </h2>
+          <p class="section__subtitle reveal-up">
+            Projects launched on our platform. Zero to orbit in record time.
+          </p>
+        </div>
+
+        <!-- Bento-style gallery grid -->
+        <div class="showcase__bento">
+          <!-- Primary large card -->
+          <figure class="bento-card bento-card--large reveal-up" tabindex="0">
+            <div class="bento-card__media bento-card__media--1" role="img" aria-label="Abstract high-energy visualization with neon gradients">
+              <div class="bento-card__overlay">
+                <span class="bento-card__tag">Featured</span>
+                <h3 class="bento-card__title">Quantum Dashboard</h3>
+                <p class="bento-card__desc">Real-time analytics at the edge. 50ms refreshes.</p>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Small card 1 -->
+          <figure class="bento-card reveal-up" tabindex="0">
+            <div class="bento-card__media bento-card__media--2" role="img" aria-label="Dark UI interface with neon green accents">
+              <div class="bento-card__overlay">
+                <span class="bento-card__tag">UI Kit</span>
+                <h3 class="bento-card__title">Velocity Design System</h3>
+                <p class="bento-card__desc">200+ components. Dark mode native.</p>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Small card 2 -->
+          <figure class="bento-card reveal-up" tabindex="0">
+            <div class="bento-card__media bento-card__media--3" role="img" aria-label="Mobile app interface with purple and blue gradients">
+              <div class="bento-card__overlay">
+                <span class="bento-card__tag">Mobile</span>
+                <h3 class="bento-card__title">YEET iOS &amp; Android</h3>
+                <p class="bento-card__desc">Full native experience. 4.9★ rating.</p>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Wide card -->
+          <figure class="bento-card bento-card--wide reveal-up" tabindex="0">
+            <div class="bento-card__media bento-card__media--4" role="img" aria-label="Data center visualization with network connections">
+              <div class="bento-card__overlay">
+                <span class="bento-card__tag">Infrastructure</span>
+                <h3 class="bento-card__title">Global Edge — 300+ PoPs</h3>
+                <p class="bento-card__desc">Your content, everywhere. Before they even ask.</p>
+              </div>
+            </div>
+          </figure>
+
+          <!-- Tall card -->
+          <figure class="bento-card bento-card--tall reveal-up" tabindex="0">
+            <div class="bento-card__media bento-card__media--5" role="img" aria-label="Command-line interface with green text on black background">
+              <div class="bento-card__overlay">
+                <span class="bento-card__tag">CLI</span>
+                <h3 class="bento-card__title">YEET CLI</h3>
+                <p class="bento-card__desc">Deploy from terminal. One command. That's it.</p>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TESTIMONIALS SECTION
+         ============================================================ -->
+    <section class="testimonials section" id="testimonials" aria-labelledby="testimonialsHeading">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__tag reveal-up">Testimonials</span>
+          <h2 class="section__title reveal-up" id="testimonialsHeading">
+            They <span class="text-gradient">yeeted</span> and never looked back.
+          </h2>
+          <p class="section__subtitle reveal-up">
+            From indie hackers to Fortune 500 teams — our platform delivers.
+          </p>
+        </div>
+
+        <div class="testimonials__grid">
+          <!-- Testimonial 1 -->
+          <blockquote class="testimonial-card reveal-up" tabindex="0">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <p class="testimonial-card__quote">
+              "We migrated our entire stack to YEET in a weekend. Our page loads
+              dropped from 3.2s to 87ms. I literally laughed out loud at the
+              before-and-after. Our conversion rate jumped 40% overnight."
+            </p>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar testimonial-card__avatar--1" aria-hidden="true"></div>
+              <div>
+                <cite class="testimonial-card__name">Sarah Chen</cite>
+                <span class="testimonial-card__role">CTO, VeloPay</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <!-- Testimonial 2 -->
+          <blockquote class="testimonial-card reveal-up" tabindex="0">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <p class="testimonial-card__quote">
+              "I've used every platform out there. YEET is the first one that
+              didn't make me want to throw my laptop out the window. The DX is
+              insane. The docs actually help. The CLI is a work of art."
+            </p>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar testimonial-card__avatar--2" aria-hidden="true"></div>
+              <div>
+                <cite class="testimonial-card__name">Marcus Rodriguez</cite>
+                <span class="testimonial-card__role">Indie Developer</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <!-- Testimonial 3 -->
+          <blockquote class="testimonial-card reveal-up" tabindex="0">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <span aria-hidden="true">★★★★★</span>
+            </div>
+            <p class="testimonial-card__quote">
+              "We evaluated 14 platforms. YEET won on every metric: speed,
+              security, support, price. The edge network alone saves us $40K/mo
+              on our old CDN. The team actually answers when we ping them."
+            </p>
+            <footer class="testimonial-card__author">
+              <div class="testimonial-card__avatar testimonial-card__avatar--3" aria-hidden="true"></div>
+              <div>
+                <cite class="testimonial-card__name">Aisha Patel</cite>
+                <span class="testimonial-card__role">VP Engineering, DataHex</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+
+        <!-- Trust logos row -->
+        <div class="testimonials__logos reveal-up" aria-label="Trusted by innovative companies">
+          <span class="testimonials__logos-label">Trusted by teams that move fast</span>
+          <div class="testimonials__logos-row">
+            <span class="testimonials__logo">VELOPAY</span>
+            <span class="testimonials__logo">DATAHEX</span>
+            <span class="testimonials__logo">ORBIT.IO</span>
+            <span class="testimonials__logo">THRUSTLY</span>
+            <span class="testimonials__logo">NOVA.INC</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CTA / CONTACT SECTION
+         ============================================================ -->
+    <section class="cta section" id="cta" aria-labelledby="ctaHeading">
+      <div class="container">
+        <div class="cta__wrapper reveal-up">
+          <div class="cta__content">
+            <span class="section__tag section__tag--dark">Ready?</span>
+            <h2 class="cta__title" id="ctaHeading">
+              Time to <span class="text-gradient">yeet</span> your ideas into existence.
+            </h2>
+            <p class="cta__text">
+              Early access is rolling out in waves. Drop your email below and
+              we'll send you an invite the moment your slot opens. No spam —
+              we yeet spam directly into the sun.
+            </p>
+
+            <!-- Email signup form -->
+            <form class="cta__form" id="signupForm" novalidate>
+              <div class="cta__input-group">
+                <label for="emailInput" class="sr-only">Email address</label>
+                <input
+                  type="email"
+                  id="emailInput"
+                  class="cta__input"
+                  placeholder="you@awesome.com"
+                  required
+                  autocomplete="email"
+                >
+                <button type="submit" class="btn btn--primary cta__submit">
+                  <span class="cta__submit-text">Get Early Access</span>
+                  <span class="cta__submit-loading" aria-hidden="true">
+                    <span class="cta__spinner"></span>
+                  </span>
+                </button>
+              </div>
+              <p class="cta__form-message" id="formMessage" aria-live="polite"></p>
+            </form>
+
+            <p class="cta__subtext">
+              Already 12,847 people in line. Your spot is waiting.
+            </p>
+          </div>
+
+          <!-- Decorative element -->
+          <div class="cta__visual" aria-hidden="true">
+            <div class="cta__orbit">
+              <div class="cta__orbit-ring"></div>
+              <div class="cta__orbit-ring"></div>
+              <div class="cta__orbit-ring"></div>
+              <div class="cta__orbit-core"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand -->
+        <div class="footer__brand">
+          <a href="#hero" class="footer__logo">YEET</a>
+          <p class="footer__tagline">Throw it into orbit.</p>
+          <p class="footer__copy">&copy; 2026 YEET. All rights reserved.</p>
+        </div>
+
+        <!-- Links -->
+        <div class="footer__col">
+          <h4 class="footer__heading">Product</h4>
+          <ul class="footer__links" role="list">
+            <li><a href="#features" class="footer__link">Features</a></li>
+            <li><a href="#showcase" class="footer__link">Showcase</a></li>
+            <li><a href="#" class="footer__link">Pricing</a></li>
+            <li><a href="#" class="footer__link">Changelog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading">Company</h4>
+          <ul class="footer__links" role="list">
+            <li><a href="#about" class="footer__link">About</a></li>
+            <li><a href="#" class="footer__link">Blog</a></li>
+            <li><a href="#" class="footer__link">Careers</a></li>
+            <li><a href="#" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading">Legal</h4>
+          <ul class="footer__links" role="list">
+            <li><a href="#" class="footer__link">Privacy</a></li>
+            <li><a href="#" class="footer__link">Terms</a></li>
+            <li><a href="#" class="footer__link">Security</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+        <p>Crafted with ⚡ at escape velocity</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
